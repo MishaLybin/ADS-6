@@ -1,14 +1,16 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <string>
 
 template<typename T, int size>
 class TPQueue {
   // реализация шаблона очереди с приоритетом на кольцевом буфере
-  private:
+ private:
     T* arr;
     int f, l, count;
-  public:
+
+ public:
     TPQueue() : f(0), l(0), count(0) {
     arr = new T[size];
     }
@@ -45,7 +47,6 @@ class TPQueue {
           return arr[f++ % size];
       }
     }
-};
 };
 
 struct SYM {
