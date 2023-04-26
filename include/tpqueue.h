@@ -8,8 +8,7 @@ class TPQueue {
   private:
     T* arr;
     int f, l, count;
-
- public:
+  public:
     TPQueue() : f(0), l(0), count(0) {
     arr = new T[size];
     }
